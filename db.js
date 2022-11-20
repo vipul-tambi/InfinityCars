@@ -1,8 +1,14 @@
-const mongoose = require("mongoose");
+if (process.env.NODE_ENV !== "production") {
+    require('dotenv').config();
+}
 
+
+
+const mongoose = require("mongoose");
+const dbUrl = process.env.DB_URL
 
 function connectDB() {
-    mongoose.connect("mongodb+srv://codeshows:asdf1234@cluster0.yirbo2e.mongodb.net/sheycars-udemy");
+    mongoose.connect(dbUrl);
 
     const connection = mongoose.connection;
 

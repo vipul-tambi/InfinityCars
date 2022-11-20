@@ -15,7 +15,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 const { RangePicker } = DatePicker;
 
-
 function BookingCar({ match }) {
     const { cars } = useSelector(state => state.carsReducer)
     const { loading } = useSelector(state => state.alertsReducer)
@@ -116,7 +115,7 @@ function BookingCar({ match }) {
                                 currency='INR'
                                 token={onToken}
                                 amount={totalAmount * 100}
-                                stripeKey="pk_test_51LqZTkSAzMUm1mNGRn2K2ykHOONPDAu9vuXFle8VNvmiAd0Lk0uZZOUcY8Ch5rNtw5wpcT1ZbrmVNdLefYqdS4cX00PytVS53n"                            >
+                                stripeKey="pk_test_51LqZTkSAzMUm1mNGRn2K2ykHOONPDAu9vuXFle8VNvmiAd0Lk0uZZOUcY8Ch5rNtw5wpcT1ZbrmVNdLefYqdS4cX00PytVS53n"    >
                                 <button className="btn1" >Book Now</button>
                             </StripeCheckout>
 

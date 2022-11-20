@@ -1,10 +1,14 @@
+if (process.env.NODE_ENV !== "production") {
+    require('dotenv').config();
+}
+
 const express = require('express');
 const Booking = require("../models/bookingModel");
 const router = express.Router();
 const Car = require('../models/carModel');
 const { v4: uuidv4 } = require('uuid');
-
-const stripe = require('stripe')('sk_test_51LqZTkSAzMUm1mNG9OAFyj1nFCbcGJcO3NL5lXN1f7VOEcAxnR3lhK3Gnp1DkgVCDYyoZQj2no1tW7CBA2Uqg7XW00zplujXM5');
+const sk = process.env.SECONDARY_KEY
+const stripe = require('stripe')(sk);
 
 
 router.post('/bookcar', async (req, res) => {
