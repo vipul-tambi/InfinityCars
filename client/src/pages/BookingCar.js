@@ -7,7 +7,6 @@ import { useParams } from 'react-router-dom';
 import Spinner from '../components/Spinner'
 import { Row, Col, Divider, DatePicker, Checkbox } from "antd";
 import moment from 'moment';
-import Modal from 'antd/lib/modal/Modal';
 
 import { bookCar } from "../redux/actions/bookingActions";
 import StripeCheckout from 'react-stripe-checkout';
